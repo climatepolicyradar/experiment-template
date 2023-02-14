@@ -1,0 +1,25 @@
+# Climate Policy Radar experiments template
+
+A cookiecutter template for data science projects.
+
+## Getting started
+
+All repositories using cookiecutter use python 3.9. You will need [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/installation.html) installed too.
+
+Then run:
+
+``` bash
+cookiecutter https://github.com/climatepolicyradar/experiment-template.git
+
+git init # optional
+
+make install
+```
+
+## Acknowledgements
+
+This project structure is based on some templates we liked:
+
+* the [`govcookiecutter` project](https://github.com/best-practice-and-impact/govcookiecutter)
+* [cookiecutter-data-science](https://github.com/drivendata/cookiecutter-data-science)
+* [harrisonpim/biscuit-cutter](https://github.com/harrisonpim/biscuit-cutter)
