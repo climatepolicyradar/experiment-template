@@ -31,7 +31,6 @@ markers = [
     "search",
     "unit",
 ]
-asyncio_mode = "strict"
 
 [tool.pydocstyle]
 # D100 - Missing docstring in public module
