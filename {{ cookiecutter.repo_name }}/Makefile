@@ -1,4 +1,4 @@
-.PHONY: install tet
+.PHONY: install test
 
 install:
 	git init
