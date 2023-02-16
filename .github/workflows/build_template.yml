@@ -1,0 +1,54 @@
+name: build-experiment-template
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  template-build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        # TODO: Fix R pre-commit hook issues with Windows
+        os: [ ubuntu-latest, macos-latest ]
+        python: [3.9, '3.10']
+
+    steps:
+      - name: Checkout the revision
+        uses: actions/checkout@v3
+        with:
+          path: cpr-experiment-template
+      - name: Set up Python ${{ matrix.python }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install cookiecutter
+        run: |
+          if [ "$RUNNER_OS" == "Linux" ]; then
+            # TODO: Add pip alternative, as Ubuntu 20.04LTS not currently supported (June 2021)
+            sudo apt-get install cookiecutter || pip install cookiecutter
+          elif [ "$RUNNER_OS" == "macOS" ]; then
+            brew install cookiecutter
+          elif [ "$RUNNER_OS" == "Windows" ]; then
+            pip install cookiecutter
+          else
+            echo "$RUNNER_OS not supported"
+            exit 1
+          fi;
+        shell: bash
+      - name: Create project from experiment template for this commit
+        run: cookiecutter cpr-experiment-template --no-input repo_name=example
+        shell: bash
+      - name: Install requirements and pre-commit hooks
+        run: |
+          cd example
+          make install
+        shell: bash
+      - name: Run pre-commit hooks
+        run: |
+          cd example
+          pre-commit run --all-files
