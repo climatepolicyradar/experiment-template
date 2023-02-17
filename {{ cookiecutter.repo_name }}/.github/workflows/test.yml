@@ -26,4 +26,7 @@ jobs:
           python -m pip install "poetry==1.2.2" && poetry install
       - name: Run test suite
         run: |
-          poetry run python -m pytest -vvv
+          poetry run python -m pytest \
+          --nbmake \
+          --nbmake-find-import-errors \
+          --nbmake-timeout=20 -vvv
