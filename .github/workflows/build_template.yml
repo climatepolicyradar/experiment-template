@@ -53,3 +53,7 @@ jobs:
         run: |
           cd example
           poetry run pre-commit run --all-files
+      - name: Run tests
+        run: |
+          cd example
+          make test
