@@ -52,8 +52,7 @@ jobs:
       - name: Run pre-commit hooks
         run: |
           cd example
-          git ls-files
-          ls 
+          git status 
           poetry run pre-commit run --all-files
       - name: Run tests
         run: |
