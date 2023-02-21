@@ -7,3 +7,9 @@ install:
 
 test: install
 	poetry run python -m pytest -vvv
+
+build:
+	docker-compose build
+
+up:
+	docker-compose up

@@ -6,6 +6,8 @@ authors = ["CPR-tech-team <tech@climatepolicyradar.org>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+uvicorn = {extras = ["standard"], version = "^0.20.0"}
+fastapi = "^0.92.0"
 
 [tool.poetry.dev-dependencies]
 ruff = "^0.0.247"
@@ -18,6 +20,7 @@ pytest-dotenv = "^0.5.2"
 
 [tool.poetry.group.dev.dependencies]
 nbmake = "^1.4.1"
+httpx = "^0.23.3"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
