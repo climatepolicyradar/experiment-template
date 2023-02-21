@@ -41,7 +41,7 @@ jobs:
           fi;
         shell: bash
       - name: Create project from experiment template for this commit
-        run: cookiecutter cpr-experiment-template --no-input repo_name=example
+        run: cookiecutter cpr-experiment-template --no-input repo_name=example && ls
         shell: bash
       - name: Install requirements and pre-commit hooks
         run: |
