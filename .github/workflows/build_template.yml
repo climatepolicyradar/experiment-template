@@ -53,6 +53,7 @@ jobs:
         run: |
           cd example
           git ls-files
+          ls 
           poetry run pre-commit run --all-files
       - name: Run tests
         run: |
