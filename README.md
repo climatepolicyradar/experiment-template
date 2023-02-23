@@ -16,6 +16,10 @@ git init # optional
 make install
 ```
 
+## Developing this repo
+
+Run `make install` to install pre-commit and the pre-commit hooks that run on the built cookiecutter template. This will prevent you from pushing code that doesn't pass CI checks.
+
 ## Acknowledgements
 
 This project structure is based on some templates we liked:

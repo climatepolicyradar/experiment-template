@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "experiment-template"
+version = "0.1.0"
+description = ""
+authors = ["CPR tech <tech@climatepolicyradar.org>"]
+readme = "README.md"
+packages = [{include = "experiment_template"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pre-commit = "^3.0.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
