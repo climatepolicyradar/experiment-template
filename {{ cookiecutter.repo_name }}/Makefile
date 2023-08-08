@@ -6,7 +6,7 @@ install:
 	poetry run pre-commit install
 	poetry run ipython kernel install --user
 
-test: install
+test:
 	poetry run python -m pytest -vvv
 
 build:
