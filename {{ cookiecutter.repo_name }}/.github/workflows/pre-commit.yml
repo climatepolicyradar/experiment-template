@@ -27,10 +27,6 @@ jobs:
 
       - name: Install dependencies
         run: |
-          poetry install
-
-      - name: Install dependencies
-        run: |
           poetry install && poetry run pre-commit install
 
       - name: Run pre-commit checks
