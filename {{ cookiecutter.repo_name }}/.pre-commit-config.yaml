@@ -5,12 +5,14 @@ repos:
       - id: check-json
       - id: detect-aws-credentials
         args: [ --allow-missing-credentials ]
-  - repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: 'v0.1.5'
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.1.6
     hooks:
-    - id: ruff
-      args: [ --fix ]
-    - id: ruff-format
+      - id: ruff
+        types_or: [ python ]
+        args: [ --fix ]
+      - id: ruff-format
+        types_or: [ python, jupyter ]
   - repo: local
     hooks:
       - id: pyright
@@ -24,3 +26,4 @@ repos:
     rev: '1.7.0'
     hooks:
     - id: poetry-lock
+      args: ["--no-update"]

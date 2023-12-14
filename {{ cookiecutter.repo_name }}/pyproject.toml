@@ -40,7 +40,7 @@ line-length = 88
 target-version = ["py39"]
 
 [tool.ruff]
-select = ["E", "F", "D"]
+select = ["E", "F", "D", "I"]
 # Docstring Ignores:
 # D100 - Missing docstring in public module
 # D103 - Missing docstring in public function
