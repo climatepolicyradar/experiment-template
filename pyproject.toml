@@ -32,6 +32,7 @@ target-version = ["py39"]
 
 [tool.ruff]
 select = ["E", "F", "D"]
+extend-select = ["I"]
 # Docstring Ignores:
 # D100 - Missing docstring in public module
 # D103 - Missing docstring in public function
