@@ -2,7 +2,7 @@
 name = "{{cookiecutter.repo_name}}"
 version = "0.1.0"
 description = ""
-authors = ["CPR-tech-team <tech@climatepolicyradar.org>"]
+authors = ["CPR Data Science <dsci@climatepolicyradar.org>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
