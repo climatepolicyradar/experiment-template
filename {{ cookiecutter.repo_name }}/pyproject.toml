@@ -2,10 +2,10 @@
 name = "{{cookiecutter.repo_name}}"
 version = "0.1.0"
 description = ""
-authors = ["CPR-tech-team <tech@climatepolicyradar.org>"]
+authors = ["CPR Data Science <dsci@climatepolicyradar.org>"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "~3.10"
 uvicorn = {extras = ["standard"], version = "^0.20.0"}
 fastapi = "^0.92.0"
 
