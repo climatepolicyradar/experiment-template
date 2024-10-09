@@ -4,7 +4,7 @@
 
 ## Getting started
 
-This project uses Python 3.9.
+This project uses Python 3.10.
 
 Installation instructions:
 

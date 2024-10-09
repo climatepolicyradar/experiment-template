@@ -4,7 +4,7 @@ A cookiecutter template for data science projects.
 
 ## Getting started
 
-All repositories using cookiecutter use python 3.9. You will need [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/installation.html) installed too.
+All repositories using cookiecutter use python 3.10. You will need [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/installation.html) installed too.
 
 Then run:
 
